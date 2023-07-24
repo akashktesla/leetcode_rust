@@ -1,3 +1,4 @@
+use leetcode_rust::prob1;
 fn main() {
-    println!("Hello, world!");
+    prob1::main();
 }
