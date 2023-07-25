@@ -63,10 +63,6 @@ pub fn add_two_numbers(l1: Option<Box<ListNode>>, l2: Option<Box<ListNode>>) -> 
 
         if flag_a && flag_b{
             if carry>0{
-                returns = Some(Box::new(ListNode{
-                    val:carry,
-                    next:returns.take(),
-                }));
             }
             flag = false;
             break;
@@ -75,15 +71,17 @@ pub fn add_two_numbers(l1: Option<Box<ListNode>>, l2: Option<Box<ListNode>>) -> 
         let t2 = b.as_ref().unwrap().val;
         let mut add = t1+t2+carry;
         carry = 0;
+        let mut returns_temp = Option::Some(Box::new(ListNode::new(add)));
+        let mut temp_pointer = returns_temp.as_ref().unwrap().next.clone();
+        let temp = Box::new(ListNode::new(add));
+        *temp_pointer.as_mut().unwrap() = temp.clone();
+        temp_pointer =  temp.next.clone();
+
         if add >= 10{
             carry = add/10;
             add = add%10;
         }
         println!("add: {}",add);
-        returns = Some(Box::new(ListNode{
-            val:add,
-            next:returns.take(),
-        }));
         a = a.unwrap().next;
         b = b.unwrap().next;
     }
