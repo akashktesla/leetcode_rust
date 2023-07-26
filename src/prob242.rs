@@ -37,3 +37,26 @@ pub fn is_anagram(s: String, t: String) -> bool {
     }
     return false;
 }
+
+fn is_anagram2(s: String, t: String) -> bool {
+    let mut a:Vec<char> = s.chars().collect();
+    a.sort();
+    let mut b:Vec<char> = s.chars().collect();
+    b.sort();
+    if a==b{
+        return true;
+    }
+    return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
