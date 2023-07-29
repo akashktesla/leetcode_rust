@@ -6,3 +6,4 @@ pub mod prob49;
 pub mod prob347;
 pub mod prob238;
 pub mod prob36;
+pub mod prob128;
