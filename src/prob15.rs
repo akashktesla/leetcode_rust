@@ -12,21 +12,21 @@ pub fn three_sum(mut nums: Vec<i32>) -> Vec<Vec<i32>>
 {
     nums.sort();
     let mut triplets : Vec<Vec<i32>> = Vec::new();
-    for i in 0..nums.len()
-    {
-        if nums[i] > 0 { break; }
-        if i > 0 && nums[i] == nums[i-1] { continue; }
-
-        for result in two_sum_sorted(&nums, i)
-        {
+    for i in 0..nums.len(){
+        if nums[i] > 0 {
+            break; 
+        }
+        if i > 0 && nums[i] == nums[i-1] { 
+            continue; 
+        }
+        for result in two_sum_sorted(&nums, i){
             triplets.push(result);
         }
     }
-    triplets
+    return triplets;
 }
 
-fn two_sum_sorted(nums: &[i32], i: usize) -> Vec<Vec<i32>>
-{       
+fn two_sum_sorted(nums: &[i32], i: usize) -> Vec<Vec<i32>>{       
     let mut j = i+1;
     let mut k = nums.len()-1;
     let mut results = Vec::new();
@@ -48,5 +48,5 @@ fn two_sum_sorted(nums: &[i32], i: usize) -> Vec<Vec<i32>>
             }
         }
     }
-    results
+    return results;
 }
