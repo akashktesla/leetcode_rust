@@ -7,3 +7,7 @@ pub mod prob347;
 pub mod prob238;
 pub mod prob36;
 pub mod prob128;
+pub mod prob125;
+pub mod prob20;
+pub mod prob167;
+pub mod prob15;
