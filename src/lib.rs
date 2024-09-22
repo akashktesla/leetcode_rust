@@ -13,3 +13,4 @@ pub mod prob167;
 pub mod prob15;
 pub mod prob155;
 pub mod prob11;
+pub mod prob10;
