@@ -36,20 +36,21 @@ fn is_match(s:String,p:String)->bool{
             2=>{
                 //matching *
 
+                let mut future_pattern:Option<char>;
                 if pattern_pointer>0{
                 let previous_pattern = pattern_list[(pattern_pointer-1) as usize];
                 starflag = true;
                 starchar = previous_pattern;
                 if pattern_pointer < pattern_length as i8{
-                    let future_pattern = pattern_list[(pattern_pointer+1) as usize];
+                    future_pattern = Some(pattern_list[(pattern_pointer+1) as usize]);
                 }
                 else{
-                    let future_pattern = None;
+                    future_pattern = None;
                 }
                 if i!=previous_pattern{
                     returns = false;
                 }
-                else if i==future_pattern{
+                else if i==future_pattern.unwrap(){
                     pattern_pointer+=1;
 
                 }
