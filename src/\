@@ -1,0 +1,20 @@
+#![allow(warnings)]
+//imports
+
+
+pub fn main(){
+     let grid = vec![vec![3,1,1],vec![2,5,1],vec![1,5,5],vec![2,1,1]];
+     let max = cherry_pick(grid);
+     println!("Max cherries: {}",max);
+         
+}
+
+fn cherry_pick(grid:Vec<Vec<i32>>)->i32{
+    for i in 0..grid.len(){
+        println!("i: {}",i);
+
+    }
+
+    return 0
+}
+
