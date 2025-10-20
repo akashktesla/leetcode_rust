@@ -47,8 +47,9 @@ fn pick_cherry(grid:&Vec<Vec<i32>>,memory:&mut Vec<Vec<Vec<i32>>>,row:&usize,col
 
     let mut best = 0;
     let trow = row+1;
-    for i in [1,0,-1]{
-        for j in [1,0,-1]{
+    let dir_vec = [1,0,-1];
+    for &i in &dir_vec{
+        for &j in &dir_vec{
             let tcol1 = (col1 as i32 +i) as usize;
             let tcol2 = (col2 as i32 +j) as usize;
             if trow >= 0 && tcol1 >= 0 && tcol2 >= 0 && trow < row_len && tcol1 < col_len && tcol2 < col_len{
