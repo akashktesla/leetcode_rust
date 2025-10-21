@@ -2,7 +2,8 @@
 use leetcode_rust::{prob1,prob2,prob217,prob242,prob49,prob347,prob238,prob36,prob128,prob125};
 use leetcode_rust::{ prob20,prob167,prob15,prob155,prob11};
 use leetcode_rust::{ prob10,prob42 };
-use leetcode_rust::{ prob1463,prob2011, prob3 };
+use leetcode_rust::{ prob1463, prob2011, prob3, prob3346};
+
 fn main() {
     // prob1::main();
     // prob2::main();
@@ -23,5 +24,7 @@ fn main() {
     // prob42::main();
     // prob1463::main();
     // prob2011::main();
-    prob3::main();
+    // prob3::main();
+    prob3346::main();
+    
 }
